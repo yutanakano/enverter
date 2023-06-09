@@ -11,4 +11,4 @@ asdf install nodejs 18.14.0
 # globalに設定
 asdf global rust 1.67.1
 asdf global python 3.11.0
-asdf global nodejs 18.14.0
+asdf global nodejs 16.20.0
