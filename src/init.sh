@@ -36,3 +36,6 @@ sh "$CURRENT/shell/zsh/zinit/init.sh"
 
 # asdf
 sh "$CURRENT/asdf/init.sh"
+
+# fig
+sh "$CURRENT/fig/init.sh"
