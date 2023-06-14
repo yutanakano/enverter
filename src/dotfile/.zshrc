@@ -1,3 +1,6 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # -------------------------------------------------
 # homebrewのパス
 # -------------------------------------------------
@@ -21,15 +24,6 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# -------------------------------------------------
-# Fig
-# -------------------------------------------------
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
 
 # -------------------------------------------------
 # Zinit
@@ -73,7 +67,7 @@ fi
 # -------------------------------------------------
 # 補完機能を有効にして、実行する
 # -------------------------------------------------
-autoload -Uz compinit && compinit
+#autoload -Uz compinit && compinit
 
 # -------------------------------------------------
 # コマンドのエイリアス
@@ -110,3 +104,6 @@ zinit load agkozak/zsh-z
 
 # 親ディレクトリへ移動
 zinit load Tarrasch/zsh-bd
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
