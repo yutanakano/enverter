@@ -1,0 +1,7 @@
+{
+    "coc.preferences.extensions.autoInstall": [
+        "coc-tsserver",
+        "coc-prettier",
+        "coc-eslint"
+    ]
+}
