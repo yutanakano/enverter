@@ -7,7 +7,7 @@
 To use enverter, please run the following command.
 
 ```shell
-sh src/int.sh
+sh src/init.sh
 ```
 
 ## Post-Initialization Steps
