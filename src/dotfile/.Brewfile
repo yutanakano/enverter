@@ -46,6 +46,8 @@ brew "fb303"
 brew "fish"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Remote repository management made easy
 brew "ghq"
 # Platform built on V8 to build network applications
@@ -106,6 +108,8 @@ brew "supabase/tap/supabase"
 cask "adobe-acrobat-reader"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
+# Chromium based browser
+cask "arc"
 # Tools for building Android applications
 cask "android-studio"
 # SQL client and database management tool
@@ -188,19 +192,26 @@ mas "Slack", id: 803453959
 mas "Transporter", id: 1450874784
 mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
+vscode "ajmnz.prisma-import"
+vscode "Arjun.swagger-viewer"
 vscode "astro-build.astro-vscode"
+vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
 vscode "bungcip.better-toml"
 vscode "byCedric.vscode-expo"
 vscode "christian-kohler.path-intellisense"
+vscode "codecov.codecov"
 vscode "CodeQue.codeque"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
 vscode "EditorConfig.EditorConfig"
 vscode "esbenp.prettier-vscode"
+vscode "expo.vscode-expo-tools"
+vscode "figma.figma-vscode-extension"
 vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
 vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "inferrinizzard.prettier-sql-vscode"
 vscode "kamikillerto.vscode-colorize"
@@ -212,6 +223,7 @@ vscode "octref.vetur"
 vscode "oderwat.indent-rainbow"
 vscode "Orta.vscode-jest"
 vscode "PKief.material-icon-theme"
+vscode "Prisma.prisma"
 vscode "redhat.vscode-yaml"
 vscode "seatonjiang.gitmoji-vscode"
 vscode "Shan.code-settings-sync"
