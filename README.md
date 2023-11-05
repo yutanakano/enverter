@@ -1,33 +1,31 @@
 # enverter
 
-`enverter` is a script for setting up the macOS environment.
+`enverter` は macOS 環境を設定するためのスクリプトです。
 
-## Usage
+## 使い方
 
-To use enverter, please run the following command.
+以下のコマンドを実行してください。
 
 ```shell
 sh src/init.sh
 ```
 
-## Post-Initialization Steps
+## 初回実行時のステップ
 
-After the initial setup, there are a few additional steps you need to take to complete the configuration. Follow the instructions below:
+初回実行時だけ追加で以下のステップを実行する必要があります。
 
-1. Generate SSH keys by running the following command to create a new RSA key pair:
+1. GitHub CLI を使い鍵の作成を行います。
    ```
-   ssh-keygen -t rsa
+   gh auth login
    ```
 
-2. Install additional fonts required for your terminal. Use the following command to configure the Powerlevel10k theme and add the necessary fonts:
+2. 端末用に追加のフォントをインストールします。Powerlevel10k テーマを設定し、必要なフォントを追加するには、以下のコマンドを使用します。
    ```
    p10k configure
    ```
 
-3. Restart your terminal application to ensure that all the changes and configurations take effect.
+3. すべての変更と設定が有効になるように、ターミナルを再起動してください。
 
-By completing these steps, you will have successfully created SSH keys for secure authentication and installed the required fonts for an enhanced terminal experience. Make sure to restart your terminal to apply the changes.
+## ライセンス
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+このプロジェクトは [MIT ライセンス](LICENSE) のもとにライセンスされています。
