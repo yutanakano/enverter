@@ -10,6 +10,8 @@ ln -nfs "$CURRENT"/.ssh/config ~/.ssh/config
 ln -nfs "$CURRENT"/.config/nvim ~/.config/nvim
 # tmux
 ln -nfs "$CURRENT"/.config/tmux ~/.config/tmux
+# starship
+ln -nfs "$CURRENT"/.config/starship.toml ~/.config/starship.toml
 # packer
 ln -nfs "$CURRENT"/.local/share/nvim/site/pack/packer/opt/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
 # .zshrc
