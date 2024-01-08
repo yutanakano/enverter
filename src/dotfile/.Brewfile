@@ -1,12 +1,11 @@
 tap "adoptopenjdk/openjdk"
 tap "aws/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "robotsandpencils/made"
 tap "supabase/tap"
-# Run your GitHub Actions locally 🚀
+# Run your GitHub Actions locally
 brew "act"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
@@ -30,6 +29,8 @@ brew "ghq"
 brew "node"
 # Interactive command-line tool for using emoji in commit messages
 brew "gitmoji"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Mac App Store command-line interface
@@ -38,8 +39,10 @@ brew "mas"
 brew "neovim"
 # Simplistic interactive filtering tool
 brew "peco"
-# 📦🚀 Fast, disk space efficient package manager
+# Fast, disk space efficient package manager
 brew "pnpm"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Text interface for Git repositories
 brew "tig"
 # Terminal multiplexer
@@ -55,7 +58,9 @@ brew "yarn"
 # Install and switch between multiple versions of Xcode
 brew "robotsandpencils/made/xcodes"
 # Supabase CLI
-brew "supabase/tap/supabase"
+brew "supabase/tap/supabase", link: false
+# Supabase CLI (Beta)
+brew "supabase/tap/supabase-beta"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # Chromium based browser
@@ -69,12 +74,18 @@ cask "dbeaver-community"
 cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Launch builds and start simulators from your menu bar
+cask "expo-orbit"
 # Reimagine your terminal
 cask "fig"
 # Collaborative team software
 cask "figma"
 # Web browser
 cask "firefox"
+# Developer targeted fonts with a high number of glyphs
+cask "font-caskaydia-cove-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-fira-code-nerd-font"
 # Shows hidden files and folders and switches their visibility in Finder
 cask "funter"
 # Web browser
@@ -118,7 +129,6 @@ vscode "astro-build.astro-vscode"
 vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
 vscode "bungcip.better-toml"
-vscode "byCedric.vscode-expo"
 vscode "christian-kohler.path-intellisense"
 vscode "codecov.codecov"
 vscode "CodeQue.codeque"
@@ -137,7 +147,9 @@ vscode "inferrinizzard.prettier-sql-vscode"
 vscode "kamikillerto.vscode-colorize"
 vscode "KyleDavidE.vscode-project-links"
 vscode "mattpocock.ts-error-translator"
+vscode "ms-azuretools.vscode-docker"
 vscode "MS-CEINTL.vscode-language-pack-ja"
+vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "octref.vetur"
 vscode "oderwat.indent-rainbow"
@@ -147,6 +159,7 @@ vscode "Prisma.prisma"
 vscode "redhat.vscode-yaml"
 vscode "seatonjiang.gitmoji-vscode"
 vscode "Shan.code-settings-sync"
+vscode "silvenon.mdx"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "sysoev.language-stylus"
 vscode "unifiedjs.vscode-mdx"
@@ -157,6 +170,6 @@ vscode "withfig.fig"
 vscode "wix.vscode-import-cost"
 vscode "xyc.vscode-mdx-preview"
 vscode "xyz.local-history"
-vscode "yoavbls.pretty-ts-errors"
+vscode "YoavBls.pretty-ts-errors"
 vscode "yusukehirao.vscode-markuplint"
 vscode "yzhang.markdown-all-in-one"
