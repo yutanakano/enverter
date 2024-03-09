@@ -35,6 +35,8 @@ brew "jq"
 brew "lazygit"
 # Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Simplistic interactive filtering tool
