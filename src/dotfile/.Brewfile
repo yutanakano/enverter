@@ -3,22 +3,19 @@ tap "aws/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
+tap "oven-sh/bun"
 tap "robotsandpencils/made"
 tap "supabase/tap"
 # Run your GitHub Actions locally
 brew "act"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
-# Extendable version manager with support for Ruby, Node.js, Erlang & more
-brew "asdf"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Command-line tool to manipulate Android App Bundles
 brew "bundletool"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
-# Load/unload environment variables based on $PWD
-brew "direnv"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -57,6 +54,8 @@ brew "vite"
 brew "watchman"
 # JavaScript package manager
 brew "yarn"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
 # Install and switch between multiple versions of Xcode
 brew "robotsandpencils/made/xcodes"
 # Supabase CLI
@@ -75,7 +74,9 @@ cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
-cask "docker"
+-cask "docker"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Launch builds and start simulators from your menu bar
 cask "expo-orbit"
 # Reimagine your terminal
@@ -116,7 +117,9 @@ cask "warp"
 cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Developer", id: 640199958
+mas "GarageBand", id: 682658836
 mas "HiddenMe", id: 467040476
+mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Keystroke Pro", id: 1572206224
 mas "LINE", id: 539883307
@@ -124,54 +127,45 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
+vscode "farosystemappender constructor"
 vscode "aaron-bond.better-comments"
 vscode "ajmnz.prisma-import"
-vscode "Arjun.swagger-viewer"
-vscode "astro-build.astro-vscode"
-vscode "bmewburn.vscode-intelephense-client"
+vscode "arjun.swagger-viewer"
 vscode "bradlc.vscode-tailwindcss"
-vscode "bungcip.better-toml"
 vscode "christian-kohler.path-intellisense"
 vscode "codecov.codecov"
-vscode "CodeQue.codeque"
+vscode "codeque.codeque"
 vscode "dbaeumer.vscode-eslint"
+vscode "dsznajder.es7-react-js-snippets"
 vscode "eamodio.gitlens"
-vscode "EditorConfig.EditorConfig"
+vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "expo.vscode-expo-tools"
 vscode "figma.figma-vscode-extension"
 vscode "formulahendry.auto-close-tag"
 vscode "formulahendry.auto-rename-tag"
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
+vscode "github.vscode-pull-request-github"
 vscode "inferrinizzard.prettier-sql-vscode"
 vscode "kamikillerto.vscode-colorize"
-vscode "KyleDavidE.vscode-project-links"
-vscode "mattpocock.ts-error-translator"
+vscode "kisstkondoros.vscode-codemetrics"
 vscode "ms-azuretools.vscode-docker"
-vscode "MS-CEINTL.vscode-language-pack-ja"
+vscode "ms-ceintl.vscode-language-pack-ja"
 vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "octref.vetur"
 vscode "oderwat.indent-rainbow"
-vscode "Orta.vscode-jest"
-vscode "PKief.material-icon-theme"
-vscode "Prisma.prisma"
+vscode "orta.vscode-jest"
+vscode "pkief.material-icon-theme"
+vscode "prisma.prisma"
 vscode "redhat.vscode-yaml"
 vscode "seatonjiang.gitmoji-vscode"
-vscode "Shan.code-settings-sync"
-vscode "silvenon.mdx"
 vscode "streetsidesoftware.code-spell-checker"
-vscode "sysoev.language-stylus"
-vscode "unifiedjs.vscode-mdx"
 vscode "usernamehw.errorlens"
-vscode "VisualStudioExptTeam.vscodeintellicode-completions"
+vscode "visualstudioexptteam.vscodeintellicode-completions"
 vscode "vscode-icons-team.vscode-icons"
 vscode "withfig.fig"
 vscode "wix.vscode-import-cost"
-vscode "xyc.vscode-mdx-preview"
-vscode "xyz.local-history"
-vscode "YoavBls.pretty-ts-errors"
+vscode "yoavbls.pretty-ts-errors"
 vscode "yusukehirao.vscode-markuplint"
-vscode "yzhang.markdown-all-in-one"
