@@ -34,8 +34,8 @@ sh "$CURRENT/homebrew/init.sh"
 # shell
 sh "$CURRENT/shell/zsh/zinit/init.sh"
 
-# asdf
-sh "$CURRENT/asdf/init.sh"
+# mise
+sh "$CURRENT/mise/init.sh"
 
 # fig
 sh "$CURRENT/fig/init.sh"
