@@ -129,6 +129,7 @@ mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
 vscode "farosystemappender constructor"
 vscode "aaron-bond.better-comments"
+vscode "aestudio.tailwind-skeleton-generator"
 vscode "ajmnz.prisma-import"
 vscode "arjun.swagger-viewer"
 vscode "bradlc.vscode-tailwindcss"
