@@ -79,8 +79,6 @@ cask "discord"
 cask "cursor"
 # Launch builds and start simulators from your menu bar
 cask "expo-orbit"
-# Reimagine your terminal
-cask "fig"
 # Collaborative team software
 cask "figma"
 # Web browser
@@ -165,7 +163,6 @@ vscode "streetsidesoftware.code-spell-checker"
 vscode "usernamehw.errorlens"
 vscode "visualstudioexptteam.vscodeintellicode-completions"
 vscode "vscode-icons-team.vscode-icons"
-vscode "withfig.fig"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yusukehirao.vscode-markuplint"
