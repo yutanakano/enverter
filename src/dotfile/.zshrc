@@ -1,5 +1,5 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# CodeWhisperer pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 
 # -------------------------------------------------
 # homebrewのパス
@@ -30,12 +30,6 @@ export DOCKER_HOST=unix://"$HOME/.docker/run/docker.sock"
 # Starshipのパス
 # -------------------------------------------------
 eval "$(starship init zsh)"
-
-# -------------------------------------------------
-# Figのパス
-# -------------------------------------------------
-export PATH="$PATH:~/.local/bin"
-export PATH="$PATH:~/.fig/bin"
 
 # -------------------------------------------------
 # Zinit
@@ -97,5 +91,5 @@ zinit load agkozak/zsh-z
 # 親ディレクトリへ移動
 zinit load Tarrasch/zsh-bd
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# CodeWhisperer post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"

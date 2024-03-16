@@ -64,6 +64,8 @@ brew "supabase/tap/supabase", link: false
 brew "supabase/tap/supabase-beta"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
+# AI-powered productivity tool for the command-line
+cask "codewhisperer"
 # Chromium based browser
 cask "arc"
 # Tools for building Android applications
@@ -79,8 +81,6 @@ cask "discord"
 cask "cursor"
 # Launch builds and start simulators from your menu bar
 cask "expo-orbit"
-# Reimagine your terminal
-cask "fig"
 # Collaborative team software
 cask "figma"
 # Web browser
@@ -129,6 +129,7 @@ mas "Slack", id: 803453959
 mas "Xcode", id: 497799835
 vscode "farosystemappender constructor"
 vscode "aaron-bond.better-comments"
+vscode "aestudio.tailwind-skeleton-generator"
 vscode "ajmnz.prisma-import"
 vscode "arjun.swagger-viewer"
 vscode "bradlc.vscode-tailwindcss"
@@ -165,7 +166,6 @@ vscode "streetsidesoftware.code-spell-checker"
 vscode "usernamehw.errorlens"
 vscode "visualstudioexptteam.vscodeintellicode-completions"
 vscode "vscode-icons-team.vscode-icons"
-vscode "withfig.fig"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
 vscode "yusukehirao.vscode-markuplint"
