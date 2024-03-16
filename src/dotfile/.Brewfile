@@ -64,6 +64,8 @@ brew "supabase/tap/supabase", link: false
 brew "supabase/tap/supabase-beta"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
+# AI-powered productivity tool for the command-line
+cask "codewhisperer"
 # Chromium based browser
 cask "arc"
 # Tools for building Android applications
