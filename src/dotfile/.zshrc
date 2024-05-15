@@ -1,6 +1,5 @@
-# CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
-
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # -------------------------------------------------
 # homebrewのパス
 # -------------------------------------------------
@@ -19,12 +18,6 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# -------------------------------------------------
-# Docker Desktopのパス
-# https://eshlox.net/2023/02/26/supabase-cli-cannot-connect-to-the-docker-daemon
-# -------------------------------------------------
-export DOCKER_HOST=unix://"$HOME/.docker/run/docker.sock"
 
 # -------------------------------------------------
 # Starshipのパス
@@ -58,11 +51,6 @@ zinit light-mode for \
 ### End of Zinit's installer chunk
 
 # -------------------------------------------------
-# コマンドのエイリアス
-# -------------------------------------------------
-alias vim='nvim'
-
-# -------------------------------------------------
 # コマンドの履歴の設定
 # -------------------------------------------------
 HISTSIZE=10000
@@ -91,5 +79,5 @@ zinit load agkozak/zsh-z
 # 親ディレクトリへ移動
 zinit load Tarrasch/zsh-bd
 
-# CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"

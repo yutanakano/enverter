@@ -65,7 +65,7 @@ brew "supabase/tap/supabase-beta"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # AI-powered productivity tool for the command-line
-cask "codewhisperer"
+cask "amazon-q"
 # Chromium based browser
 cask "arc"
 # Tools for building Android applications
@@ -76,9 +76,11 @@ cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerized applications and microservices
--cask "docker"
+cask "docker"
 # Write, edit, and chat about your code with AI
 cask "cursor"
+# Assign keys, and then decorate and label them
+cask "elgato-stream-deck"
 # Launch builds and start simulators from your menu bar
 cask "expo-orbit"
 # Collaborative team software
@@ -123,6 +125,7 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Keystroke Pro", id: 1572206224
 mas "LINE", id: 539883307
+mas "MenuBar Stats", id: 714196447
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
@@ -149,7 +152,6 @@ vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
-vscode "inferrinizzard.prettier-sql-vscode"
 vscode "kamikillerto.vscode-colorize"
 vscode "kisstkondoros.vscode-codemetrics"
 vscode "ms-azuretools.vscode-docker"
@@ -161,6 +163,7 @@ vscode "orta.vscode-jest"
 vscode "pkief.material-icon-theme"
 vscode "prisma.prisma"
 vscode "redhat.vscode-yaml"
+vscode "renesaarsoo.sql-formatter-vsc"
 vscode "seatonjiang.gitmoji-vscode"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "usernamehw.errorlens"

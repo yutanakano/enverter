@@ -16,10 +16,6 @@ if [ ! -e ~/.config ]; then
     # .configを作成
     mkdir ~/.config
 fi
-if [ ! -e ~/.local ]; then
-    # .localを作成
-    mkdir -p ~/.local/share/nvim/site/pack/packer/opt/
-fi
 if [ ! -e ~/.gitmoji ]; then
     # .gitmojiを作成
     mkdir ~/.gitmoji
@@ -36,6 +32,3 @@ sh "$CURRENT/shell/zsh/zinit/init.sh"
 
 # mise
 sh "$CURRENT/mise/init.sh"
-
-# fig
-sh "$CURRENT/fig/init.sh"

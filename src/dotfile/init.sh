@@ -2,18 +2,12 @@
 
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
-# brew
-ln -nfs "$CURRENT"/.Brewfile ~/.Brewfile
 # ssh
 ln -nfs "$CURRENT"/.ssh/config ~/.ssh/config
-# nvim
-ln -nfs "$CURRENT"/.config/nvim ~/.config/nvim
 # tmux
 ln -nfs "$CURRENT"/.config/tmux ~/.config/tmux
 # starship
 ln -nfs "$CURRENT"/.config/starship.toml ~/.config/starship.toml
-# packer
-ln -nfs "$CURRENT"/.local/share/nvim/site/pack/packer/opt/packer.nvim ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
 # .zshrc
 ln -nfs "$CURRENT"/.zshrc ~/.zshrc
 # .p10k.zsh
