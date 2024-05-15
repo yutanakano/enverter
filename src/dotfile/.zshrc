@@ -21,12 +21,6 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # -------------------------------------------------
-# Docker Desktopのパス
-# https://eshlox.net/2023/02/26/supabase-cli-cannot-connect-to-the-docker-daemon
-# -------------------------------------------------
-export DOCKER_HOST=unix://"$HOME/.docker/run/docker.sock"
-
-# -------------------------------------------------
 # Starshipのパス
 # -------------------------------------------------
 eval "$(starship init zsh)"
