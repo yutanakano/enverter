@@ -2,8 +2,6 @@
 
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
-# brew
-ln -nfs "$CURRENT"/.Brewfile ~/.Brewfile
 # ssh
 ln -nfs "$CURRENT"/.ssh/config ~/.ssh/config
 # tmux
