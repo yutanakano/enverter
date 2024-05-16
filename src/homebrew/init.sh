@@ -3,7 +3,7 @@
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
 # brew
-ln -nfs "$CURRENT"/Brewfile ~/Brewfile
+ln -nfs "$CURRENT"/Brewfile ~/.Brewfile
 
 echo "installing homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" >/dev/null 2>&1
