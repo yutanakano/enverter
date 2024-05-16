@@ -91,6 +91,10 @@ cask "firefox"
 cask "font-caskaydia-cove-nerd-font"
 # Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-jetbrains-mono-nerd-font"
 # Shows hidden files and folders and switches their visibility in Finder
 cask "funter"
 # Web browser
