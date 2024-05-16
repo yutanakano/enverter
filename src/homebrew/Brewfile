@@ -59,9 +59,7 @@ brew "oven-sh/bun/bun"
 # Install and switch between multiple versions of Xcode
 brew "robotsandpencils/made/xcodes"
 # Supabase CLI
-brew "supabase/tap/supabase", link: false
-# Supabase CLI (Beta)
-brew "supabase/tap/supabase-beta"
+brew "supabase/tap/supabase"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # AI-powered productivity tool for the command-line
@@ -91,6 +89,10 @@ cask "firefox"
 cask "font-caskaydia-cove-nerd-font"
 # Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-jetbrains-mono-nerd-font"
 # Shows hidden files and folders and switches their visibility in Finder
 cask "funter"
 # Web browser

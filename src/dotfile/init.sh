@@ -10,8 +10,6 @@ ln -nfs "$CURRENT"/.config/tmux ~/.config/tmux
 ln -nfs "$CURRENT"/.config/starship.toml ~/.config/starship.toml
 # .zshrc
 ln -nfs "$CURRENT"/.zshrc ~/.zshrc
-# .p10k.zsh
-ln -nfs "$CURRENT"/.p10k.zsh ~/.p10k.zsh
 # .gitconfig
 ln -nfs "$CURRENT"/.gitconfig ~/.gitconfig
 git update-index --skip-worktree "$CURRENT/.gitconfig"
