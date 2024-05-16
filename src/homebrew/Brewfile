@@ -59,7 +59,7 @@ brew "oven-sh/bun/bun"
 # Install and switch between multiple versions of Xcode
 brew "robotsandpencils/made/xcodes"
 # Supabase CLI
-brew "supabase/tap/supabase", link: false
+brew "supabase/tap/supabase"
 # Supabase CLI (Beta)
 brew "supabase/tap/supabase-beta"
 # JDK from the Java User Group (JUG)
