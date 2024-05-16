@@ -60,8 +60,6 @@ brew "oven-sh/bun/bun"
 brew "robotsandpencils/made/xcodes"
 # Supabase CLI
 brew "supabase/tap/supabase"
-# Supabase CLI (Beta)
-brew "supabase/tap/supabase-beta"
 # JDK from the Java User Group (JUG)
 cask "adoptopenjdk"
 # AI-powered productivity tool for the command-line
