@@ -22,6 +22,16 @@ sh src/init.sh
 2. すべての変更と設定が有効になるように、ターミナルを再起動してください。
 3. vscodeとiTerm2にfontを適用してください
 
+## Brewfileの更新
+
+インストールしているHomebrewパッケージを最新の状態でBrewfileに書き出す場合は、リポジトリのルートで以下のコマンドを実行してください。
+
+### Apple Silicon (ARM64) の場合
+
+```bash
+/opt/homebrew/bin/brew bundle dump --force --describe --file ./src/homebrew/Brewfile
+```
+
 ## ライセンス
 
 このプロジェクトは [MIT ライセンス](LICENSE) のもとにライセンスされています。
