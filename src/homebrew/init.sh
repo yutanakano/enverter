@@ -1,20 +1,34 @@
 #!/bin/sh
+set -e
 
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
 # brew
-ln -nfs "$CURRENT"/Brewfile ~/.Brewfile
+echo "Linking Brewfile..."
+ln -nfs "$CURRENT"/Brewfile ~/.Brewfile || { echo "Error: Failed to link Brewfile"; exit 1; }
 
-echo "installing homebrew..."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" >/dev/null 2>&1
+# Check if brew is already installed
+if ! command -v brew >/dev/null 2>&1; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" || { echo "Error: Homebrew installation failed"; exit 1; }
+else
+    echo "Homebrew is already installed"
+fi
 
-echo "run brew doctor..."
-which brew >/dev/null 2>&1 && brew doctor
+# Ensure brew is available
+if ! command -v brew >/dev/null 2>&1; then
+    echo "Error: brew command not found after installation"
+    exit 1
+fi
 
-echo "run brew update..."
-which brew >/dev/null 2>&1 && brew update
+echo "Running brew doctor..."
+brew doctor || echo "Warning: brew doctor found some issues (non-fatal)"
 
-echo "ok. run brew upgrade..."
-brew upgrade
+echo "Running brew update..."
+brew update || { echo "Error: brew update failed"; exit 1; }
 
-brew bundle --global
+echo "Running brew upgrade..."
+brew upgrade || echo "Warning: brew upgrade had some issues (non-fatal)"
+
+echo "Running brew bundle..."
+brew bundle --global || { echo "Error: brew bundle failed"; exit 1; }

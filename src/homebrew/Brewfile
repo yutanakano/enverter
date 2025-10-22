@@ -92,8 +92,6 @@ cask "docker-desktop"
 cask "elgato-stream-deck"
 # Launch builds and start simulators from your menu bar
 cask "expo-orbit"
-# Reimagine your terminal
-cask "fig"
 # Collaborative team software
 cask "figma"
 # Web browser
