@@ -3,9 +3,17 @@ set -e
 
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
-# brew
-echo "Linking Brewfile..."
-ln -nfs "$CURRENT"/Brewfile ~/.Brewfile || { echo "Error: Failed to link Brewfile"; exit 1; }
+# Brewfile path handling
+BREWFILE_PATH="${1:-$HOME/.Brewfile}"
+BREWFILE_EXISTS=false
+
+# Check if Brewfile exists
+if [ -f "$BREWFILE_PATH" ]; then
+    echo "Using existing Brewfile at: $BREWFILE_PATH"
+    BREWFILE_EXISTS=true
+else
+    echo "Brewfile not found at: $BREWFILE_PATH"
+fi
 
 # Check if brew is already installed
 if ! command -v brew >/dev/null 2>&1; then
@@ -21,6 +29,13 @@ if ! command -v brew >/dev/null 2>&1; then
     exit 1
 fi
 
+# Create Brewfile if it doesn't exist
+if [ "$BREWFILE_EXISTS" = false ]; then
+    echo "Creating Brewfile from current Homebrew installations..."
+    brew bundle dump --force --describe --file="$BREWFILE_PATH" || { echo "Error: Failed to dump Brewfile"; exit 1; }
+    echo "✅ Brewfile created at: $BREWFILE_PATH"
+fi
+
 echo "Running brew doctor..."
 brew doctor || echo "Warning: brew doctor found some issues (non-fatal)"
 
@@ -30,5 +45,12 @@ brew update || { echo "Error: brew update failed"; exit 1; }
 echo "Running brew upgrade..."
 brew upgrade || echo "Warning: brew upgrade had some issues (non-fatal)"
 
-echo "Running brew bundle..."
-brew bundle --global || { echo "Error: brew bundle failed"; exit 1; }
+# If Brewfile existed, install and update
+if [ "$BREWFILE_EXISTS" = true ]; then
+    echo "Running brew bundle..."
+    brew bundle --file="$BREWFILE_PATH" || { echo "Error: brew bundle failed"; exit 1; }
+
+    echo "Updating Brewfile with latest state..."
+    brew bundle dump --force --describe --file="$BREWFILE_PATH" || { echo "Error: Failed to dump Brewfile"; exit 1; }
+    echo "✅ Brewfile updated at: $BREWFILE_PATH"
+fi
