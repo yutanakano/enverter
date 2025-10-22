@@ -17,16 +17,18 @@ ln -nfs "$CURRENT"/.config/starship.toml ~/.config/starship.toml
 # .zshrc
 ln -nfs "$CURRENT"/.zshrc ~/.zshrc
 # .gitconfig
-if [ ! -f "$CURRENT"/.gitconfig ]; then
+if [ ! -f ~/.gitconfig ]; then
     echo "Setting up .gitconfig..."
-    cp "$CURRENT"/.gitconfig.template "$CURRENT"/.gitconfig
+    cp "$CURRENT"/.gitconfig.template ~/.gitconfig
     read -p "Enter your name: " git_name
     read -p "Enter your email: " git_email
-    sed -i.bak "s/YOUR_NAME/$git_name/" "$CURRENT"/.gitconfig
-    sed -i.bak "s/YOUR_EMAIL/$git_email/" "$CURRENT"/.gitconfig
-    rm "$CURRENT"/.gitconfig.bak
+    sed -i.bak "s/YOUR_NAME/$git_name/" ~/.gitconfig
+    sed -i.bak "s/YOUR_EMAIL/$git_email/" ~/.gitconfig
+    rm ~/.gitconfig.bak
+    echo "✅ .gitconfig created"
+else
+    echo ".gitconfig already exists, skipping"
 fi
-ln -nfs "$CURRENT"/.gitconfig ~/.gitconfig
 # .gitmoji
 mkdir -p ~/.gitmoji
 ln -nfs "$CURRENT"/.gitmoji/gitmojis.json ~/.gitmoji/gitmojis.json
