@@ -50,8 +50,4 @@ fi
 echo "Linking gitmoji config..."
 ln -nfs "$CURRENT"/.gitmoji/gitmojis.json ~/.gitmoji/gitmojis.json || { echo "Error: Failed to link gitmoji config"; exit 1; }
 
-# .tmux.conf
-echo "Linking .tmux.conf..."
-ln -nfs "$CURRENT"/.tmux.conf ~/.tmux.conf || { echo "Error: Failed to link .tmux.conf"; exit 1; }
-
 echo "✅ Dotfiles setup completed"
