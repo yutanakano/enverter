@@ -4,7 +4,23 @@ set -e
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
 # Brewfile path handling
-BREWFILE_PATH="${1:-$HOME/.Brewfile}"
+if [ -n "$1" ]; then
+    # Convert relative path to absolute path
+    case "$1" in
+        /*)
+            # Already absolute path
+            BREWFILE_PATH="$1"
+            ;;
+        *)
+            # Relative path - convert to absolute
+            BREWFILE_DIR="$(cd "$(dirname "$1")" 2>/dev/null && pwd)" || { echo "Error: Invalid path directory"; exit 1; }
+            BREWFILE_PATH="$BREWFILE_DIR/$(basename "$1")"
+            ;;
+    esac
+else
+    # Default to ~/.Brewfile
+    BREWFILE_PATH="$HOME/.Brewfile"
+fi
 BREWFILE_EXISTS=false
 
 # Check if Brewfile exists
