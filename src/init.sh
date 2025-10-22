@@ -9,9 +9,9 @@ echo "Installing Rosetta..."
 
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
-# dotfile
+# dotfiles
 echo "Setting up dotfiles..."
-sh "$CURRENT/dotfile/init.sh" || { echo "Error: dotfile setup failed"; exit 1; }
+sh "$CURRENT/dotfiles/init.sh" || { echo "Error: dotfiles setup failed"; exit 1; }
 
 # homebrew
 echo "Setting up Homebrew..."
