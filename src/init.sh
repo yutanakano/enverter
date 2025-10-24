@@ -5,10 +5,6 @@ echo "Starting enverter setup..."
 
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
-# dotfiles
-echo "Setting up dotfiles..."
-sh "$CURRENT/dotfiles/init.sh" || { echo "Error: dotfiles setup failed"; exit 1; }
-
 # homebrew
 echo "Setting up Homebrew..."
 sh "$CURRENT/homebrew/init.sh" || { echo "Error: Homebrew setup failed"; exit 1; }
