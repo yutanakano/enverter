@@ -1,34 +1,24 @@
 #!/bin/sh
+set -e
 
-# rosetta
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+echo "Starting enverter setup..."
 
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
-if [ ! -e ~/ghq ]; then
-    # ghqを作成
-    mkdir ~/ghq
-fi
-if [ ! -e ~/.ssh ]; then
-    # .sshを作成
-    mkdir ~/.ssh
-fi
-if [ ! -e ~/.config ]; then
-    # .configを作成
-    mkdir ~/.config
-fi
-if [ ! -e ~/.gitmoji ]; then
-    # .gitmojiを作成
-    mkdir ~/.gitmoji
-fi
 
-# dotfile
-sh "$CURRENT/dotfile/init.sh"
+# dotfiles
+echo "Setting up dotfiles..."
+sh "$CURRENT/dotfiles/init.sh" || { echo "Error: dotfiles setup failed"; exit 1; }
 
 # homebrew
-sh "$CURRENT/homebrew/init.sh"
+echo "Setting up Homebrew..."
+sh "$CURRENT/homebrew/init.sh" || { echo "Error: Homebrew setup failed"; exit 1; }
 
 # shell
-sh "$CURRENT/shell/zsh/zinit/init.sh"
+echo "Setting up shell (zinit)..."
+sh "$CURRENT/shell/zsh/zinit/init.sh" || { echo "Error: shell setup failed"; exit 1; }
 
 # mise
-sh "$CURRENT/mise/init.sh"
+echo "Setting up mise..."
+sh "$CURRENT/mise/init.sh" || { echo "Error: mise setup failed"; exit 1; }
+
+echo "✅ enverter setup completed successfully!"
