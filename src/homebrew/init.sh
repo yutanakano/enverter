@@ -4,29 +4,9 @@ set -e
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
 # -------------------------------------------------
-# Brewfile パスの決定と正規化
+# Brewfile パスの設定
 # -------------------------------------------------
-# 引数: Brewfile のパス（オプション）
-# デフォルト: ~/.Brewfile
-# 相対パスが指定された場合は絶対パスに変換
-if [ -n "$1" ]; then
-    # 引数が指定された場合
-    case "$1" in
-        /*)
-            # 絶対パス（/ で始まる）の場合はそのまま使用
-            BREWFILE_PATH="$1"
-            ;;
-        *)
-            # 相対パスの場合は絶対パスに変換
-            # dirname で親ディレクトリに移動し、pwd で絶対パスを取得
-            BREWFILE_DIR="$(cd "$(dirname "$1")" 2>/dev/null && pwd)" || { echo "Error: Invalid path directory"; exit 1; }
-            BREWFILE_PATH="$BREWFILE_DIR/$(basename "$1")"
-            ;;
-    esac
-else
-    # 引数が指定されていない場合はデフォルトを使用
-    BREWFILE_PATH="$HOME/.Brewfile"
-fi
+BREWFILE_PATH="$HOME/.Brewfile"
 
 # Brewfile の存在を確認し、フラグに記録
 BREWFILE_EXISTS=false
