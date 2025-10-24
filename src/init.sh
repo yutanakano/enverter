@@ -3,10 +3,6 @@ set -e
 
 echo "Starting enverter setup..."
 
-# rosetta
-echo "Installing Rosetta..."
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license || echo "Rosetta installation skipped or already installed"
-
 CURRENT="$(cd "$(dirname "$0")" && pwd)"
 
 # dotfiles
